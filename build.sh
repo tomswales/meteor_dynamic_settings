@@ -22,7 +22,7 @@ METEOR_VARIABLES='{
           },
     "abc_api" : {
               "secret_key": "'"$APIKEY2"'",
-          },
+          }
   }
 }'
 
