@@ -25,10 +25,10 @@ METEOR_VARIABLES='{
           }
   }
 }'
-
-meteor build ../my_example_app_build
+# Thanks to coagmano https://forums.meteor.com/t/dynamic-meteor-settings-at-build-run-time/52601
+meteor build --directory ../my_example_app_build
 cd ../my_example_app_build
-tar -xvf my_example_ap.tar.gz
+
 if cd bundle; then
 	(cd programs/server && npm install)
 	ROOT_URL=http://example.com PORT=3000 METEOR_SETTINGS=$METEOR_VARIABLES node ./main.js > app.log 2>&1
